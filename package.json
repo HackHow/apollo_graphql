@@ -1,0 +1,28 @@
+{
+  "name": "pet_interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "nodemon src/app.ts",
+    "build": "tsc",
+    "build:watch": "npm run build -- --watch",
+    "test": "ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/util.promisify": "^1.0.4",
+    "apollo-server": "^3.11.1",
+    "argon2": "^0.30.1",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.9",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "account": "test1",
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$8SV1xFf+bIOaj+yhuUgsfw$5YFRRzGuxPpcOsPNjwEn6LkE6fUIALSr4yXYgSPSaE4",
+        "name": "user1",
+        "birthday": "2000-01-01"
+    },
+    {
+        "account": "test2",
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$qu1G0AQFqQfKcDEEGMifhw$n40mM9gW20VOfQ1WBwNBzcpAqSWvQ8NwS1JFcnsU4Sw",
+        "name": "user2",
+        "birthday": "2000-10-10"
+    }
+]
