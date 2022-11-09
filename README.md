@@ -27,6 +27,7 @@ $ npm run start
 ## 2. 程式架構
 
 整體的程式架構，如圖：
+[apollo_graphql_tree](https://user-images.githubusercontent.com/56557271/200731156-0dc061a5-9995-4062-be0a-a91dd9262e3c.JPG)
 
 - 主要的檔案為 `src/app.ts` 作為 server 啟動的檔案。
 - 啟動 server 所需要的參數 (resolvers, typeDefs) 從 `src/graphql` 這個資料夾引入。
