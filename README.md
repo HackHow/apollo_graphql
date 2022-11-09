@@ -2,7 +2,7 @@
 
 ## 1. 程式啟動方式
 
-step1
+### **_step1_**
 
 ```
 $ git clone https://github.com/HackHow/apollo_graphql.git
@@ -12,17 +12,17 @@ $ git clone https://github.com/HackHow/apollo_graphql.git
 $ npm install
 ```
 
-step2
+### **_step2_**
 
 進入專案的檔案夾，建立 .env 檔，將 .env.example 內的變數複製過去，自行將變數填入值即可
 
-step3
+### **_step3_**
 
 ```
 $ npm run start
 ```
 
-就可以進入到 [Apollo-server playground](http://localhost:4000/) 進行 API 測試
+就可以進入到 **[Apollo-server playground](http://localhost:4000/)** 進行 API 測試
 
 ## 2. 程式架構
 
