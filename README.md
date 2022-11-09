@@ -30,10 +30,11 @@ $ npm run start
 
 ![apollo_graphql_tree](https://user-images.githubusercontent.com/56557271/200731156-0dc061a5-9995-4062-be0a-a91dd9262e3c.JPG)
 
-- 主要的檔案為 `src/app.ts` 作為 server 啟動的檔案。
-- 啟動 server 所需要的參數 (resolvers, typeDefs) 從 `src/graphql` 這個資料夾引入。
-- 由於此專案沒有使用到資料庫，所以資料是由自己透過 `.json` 的格式去做定義，因此將 .json 的檔案放在 `src/models` 的資料夾內。
-- `util/utils` 內部主要是放其他程式可能會需要用到的 function，以這次專案為例，就將 jwt token 的簽證、驗證的 function 放入 util.ts。
+- 主要的檔案為 `src/app.ts` 作為 server 啟動的檔案
+- 啟動 server 所需要的參數 (resolvers, typeDefs) 從 `src/graphql` 這個資料夾引入
+- 由於此專案沒有使用到資料庫，所以資料是由自己透過 `.json` 的格式去做定義，因此將選擇將 .json 的檔案放在 `src/models` 的資料夾內
+- `util/utils` 內部主要是放其他程式可能會需要用到的 function，以這次專案為例，就將 jwt token 的簽證、驗證的 function 放入 util.ts
+- `fake_data/` 資料夾內部放的程式碼主要是在製作假資料時需要將密碼進行 hash 的程式
 
 ## 3. api 的規格與範例
 
