@@ -27,7 +27,8 @@ $ npm run start
 ## 2. 程式架構
 
 整體的程式架構，如圖：
-[apollo_graphql_tree](https://user-images.githubusercontent.com/56557271/200731156-0dc061a5-9995-4062-be0a-a91dd9262e3c.JPG)
+
+![apollo_graphql_tree](https://user-images.githubusercontent.com/56557271/200731156-0dc061a5-9995-4062-be0a-a91dd9262e3c.JPG)
 
 - 主要的檔案為 `src/app.ts` 作為 server 啟動的檔案。
 - 啟動 server 所需要的參數 (resolvers, typeDefs) 從 `src/graphql` 這個資料夾引入。
@@ -37,6 +38,9 @@ $ npm run start
 ## 3. api 的規格與範例
 
 API 規格如圖：
+
+![API_example](https://user-images.githubusercontent.com/56557271/200731538-42fa5a3e-6846-4bf9-b591-9e9ba8b23d34.JPG)
+
 
 本次測試的假資料一共有 2 筆，分別為
 
@@ -49,7 +53,10 @@ API 規格如圖：
 ```
 
 - 首先，需要對 `login()` 的 API 進行 query，在 `apollo server playground`，或是 `Postman` graphQL 的 Variables window 提供上方任一組帳號、密碼，驗證成功即可得到 accessToken。
-- 獲得 token 之後，將其傳入圖片中的欄位 (如果使用 Postman 則是將其放入 Authorization 的 token，Type 記得要修改為 Bearer Token)
-- 傳入 token 再對 `me()` 的 API 進行 query，可根據使用者想要得到什麼資訊去選取，圖片中是提供使用者的所有資訊
+- 獲得 token 之後，將其傳入下方圖片中的欄位 (如果使用 Postman 則是將其放入 Authorization 的 token，Type 記得要修改為 Bearer Token)
+
+![put_token](https://user-images.githubusercontent.com/56557271/200731676-d911aa60-d92f-42bf-aa1b-2b1e4018d653.JPG)
+
+- 傳入 token 再對 `me()` 的 API 進行 query，可根據使用者想要得到什麼資訊去選取，本次範例是提供使用者的所有資訊
 
 ## 4. 整個過程的研究心得
