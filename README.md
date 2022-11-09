@@ -51,8 +51,10 @@ API 規格如圖：
 "password": "654321"
 ```
 
-- 首先，需要對 `login()` 的 API 進行 query，在 `apollo server playground`，或是 `Postman` GraphQL 的 Variables window 提供上方任一組帳號、密碼，驗證成功即可得到 accessToken。
-- 獲得 token 之後，將其傳入圖片中的欄位 (如果使用 Postman 則是將其放入 Authorization 的 token，Type 記得要修改為 Bearer Token)
+- 首先，需要對 `login()` 的 API 進行 query，在 `apollo server playground` (該環境可以透過滑鼠取選取要 input 的參數，再自己去修改參數的值即可)，或是 `Postman` GraphQL 的 Variables window 輸入上方任一組帳號、密碼，驗證成功即可得到 **accessToken**。
+
+- 獲得 token 之後，將其傳入圖片中的欄位 (如果是使用 `Postman` 進行測 ˋ 是， 則是將其放入 Authorization 的 **Token**，Type 記得要修改為 **Bearer Token**)
+
 - 傳入 token 再對 `me()` 的 API 進行 query，可根據使用者想要得到什麼資訊去選取，圖片中是提供使用者的所有資訊
 
 ## 4. 整個過程的研究心得
