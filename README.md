@@ -51,8 +51,20 @@ API 規格如圖：
 "password": "654321"
 ```
 
-- 首先，需要對 `login()` 的 API 進行 query，在 `apollo server playground`，或是 `Postman` graphQL 的 Variables window 提供上方任一組帳號、密碼，驗證成功即可得到 accessToken。
+- 首先，需要對 `login()` 的 API 進行 query，在 `apollo server playground`，或是 `Postman` GraphQL 的 Variables window 提供上方任一組帳號、密碼，驗證成功即可得到 accessToken。
 - 獲得 token 之後，將其傳入圖片中的欄位 (如果使用 Postman 則是將其放入 Authorization 的 token，Type 記得要修改為 Bearer Token)
 - 傳入 token 再對 `me()` 的 API 進行 query，可根據使用者想要得到什麼資訊去選取，圖片中是提供使用者的所有資訊
 
 ## 4. 整個過程的研究心得
+
+### 整個過程:
+
+一開始收到作業時，確認 API 需要的資料格式後，就先去研究 TypeScript 該怎麼寫，大概知道怎麼去定義型別之後，就去研究 Apollo server，發現到 Apollo 這個套件幫我們做了非常多的事情，所以我可以很快地往 GraphQL 去做研究，過程大概是這樣： _**TypeScript >> Apollo server >> GraphQL**_
+
+在過程中其實有發現到網路上的例子很多都是使用 apollo-server-express 這個套件。在時間沒有那麼多的情況下，我自己則是使用 apollor-server，其實我沒有仔細研究兩者差異在哪。但 apollor-server 的官方文件在 Get started 就寫得滿清楚的，主要就是透過官方文件和網路上的一些範例去了解到 GraphQL 的寫法，以及如何套用在 Apollo server
+
+### 研究心得:
+
+第一次嘗試寫 TypeScript 和 GraphQL，在程式的架構上跟過往撰寫過的 RESTful API 差滿多的。過往都是都會使用 Exprss 去區分 _`routers`_、_`controllers`_、_`models`_，雖然 Apollo server 也是使用 Express，但寫法上就落差滿大的。再加上這是並沒有使用到 Database，在 models 這層資料夾也僅有存放 `.json` 的假資料，至於 controller 的部分不太熟悉 GraphQL 要怎麼去拆分，都是寫在 `resolvers.ts` 檔案裡面，再加上 resolvers 是 Apollo server 需要引入的參數，所以就沒有再另外開 controllers 的資料夾。
+
+除了學習以上新工具之外，最讓我不習慣的還是 TypeScript，過往在 JS 能夠執行的程式碼，換成 TS 就不行了，研究很久型別該怎麼去定義，以及為什麼定義了卻還發生錯誤。最後程式是可以執行，但不確定型別定義的好不好。錯誤處理的機制只有大概看一下，沒有花太多的時間在上面，還是盡量以 API 能夠被使用為優先
